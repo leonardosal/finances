@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - '10'
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $API_KEY
+  app: 'finances'
+
+before_script:
+  - yarn install
+
+script:
+  - yarn test

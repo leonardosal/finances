@@ -1,0 +1,26 @@
+.container {
+  padding: 16px;
+
+  @media (min-width: 1025px) {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+.box {
+  background-color: #ccc;
+  min-height: calc(100vh - 82px);
+}
+
+.button {
+  padding: 8px;
+}
+
+.row {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
