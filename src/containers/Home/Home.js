@@ -13,7 +13,6 @@ export default class Home extends Component {
     this.state = {
       showModal: false,
       transactions: [],
-      category: '',
       description: '',
       value: 0,
       type: 'DEBIT',
@@ -61,8 +60,8 @@ export default class Home extends Component {
 
   clearFields = () => {
     this.setState({
-      category: '',
       description: '',
+      type: 'DEBIT',
       value: 0,
     });
   };
@@ -97,7 +96,6 @@ export default class Home extends Component {
     const {
       showModal,
       transactions,
-      category,
       description,
       type,
       value,
@@ -119,7 +117,6 @@ export default class Home extends Component {
           toggleModal={this.toggleModal}
           addTransactions={this.addTransactions}
           onChangeField={this.onChangeField}
-          category={category}
           value={value}
           type={type}
           description={description}

@@ -3,13 +3,7 @@ import propTypes from 'prop-types';
 
 import './row.scss';
 
-const formatValue = value => {
-  return parseInt(value, 10).toLocaleString('pt-br', {
-    minimumFractionDigits: 2,
-    style: 'currency',
-    currency: 'BRL',
-  });
-};
+import { formatValue } from '../../utils';
 
 const Row = ({ description, value, type }) => (
   <div className="row">
