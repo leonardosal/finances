@@ -15,27 +15,21 @@ class Modal extends Component {
     const {
       show,
       toggleModal,
-      addTransactions,
+      submitForm,
       onChangeField,
-      value,
-      type,
-      description,
+      transaction,
     } = this.props;
     return (
       <div id="modal" className={show ? 'modal show' : 'modal'}>
         <div className="modal-content">
           <h3>Adicionar transação</h3>
-          <form
-            name="transactionForm"
-            className="form"
-            onSubmit={addTransactions}
-          >
+          <form name="transactionForm" className="form" onSubmit={submitForm}>
             <label htmlFor="type">
               Tipo
               <select
                 name="type"
                 onChange={e => onChangeField('type', e.target.value)}
-                value={type}
+                value={transaction.type}
               >
                 <option value="DEBIT">Despesa</option>
                 <option value="CREDIT">Receita</option>
@@ -47,7 +41,7 @@ class Modal extends Component {
                 name="value"
                 type="number"
                 onChange={e => onChangeField('value', e.target.value)}
-                value={value}
+                value={transaction.value}
               />
             </label>
             <label htmlFor="description">
@@ -55,7 +49,7 @@ class Modal extends Component {
               <input
                 name="description"
                 onChange={e => onChangeField('description', e.target.value)}
-                value={description}
+                value={transaction.description}
               />
             </label>
             <div className="footer">
@@ -71,19 +65,23 @@ class Modal extends Component {
 
 Modal.propTypes = {
   toggleModal: propTypes.func.isRequired,
-  addTransactions: propTypes.func.isRequired,
+  submitForm: propTypes.func.isRequired,
   onChangeField: propTypes.func.isRequired,
   show: propTypes.bool,
-  value: propTypes.number,
-  type: propTypes.string,
-  description: propTypes.string,
+  transaction: propTypes.shape({
+    value: propTypes.number,
+    type: propTypes.string,
+    description: propTypes.string,
+  }),
 };
 
 Modal.defaultProps = {
   show: false,
-  value: 0,
-  description: '',
-  type: 'button',
+  transaction: {
+    value: 0,
+    description: '',
+    type: 'button',
+  },
 };
 
 export default Modal;

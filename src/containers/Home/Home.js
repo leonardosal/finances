@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import uuidv4 from 'uuid/v4';
-
-import './home.scss';
 
 import Modal from '../../components/Modal';
 import Table from '../../components/Table';
 import CardInfo from '../../components/CardInfo';
+
+import {
+  calculateBalance,
+  saveInStorage,
+  loadFromStorage,
+  addItem,
+} from '../../utils';
+
+import './home.scss';
 
 export default class Home extends Component {
   constructor(props) {
@@ -13,23 +19,20 @@ export default class Home extends Component {
     this.state = {
       showModal: false,
       transactions: [],
-      description: '',
-      value: 0,
-      type: 'DEBIT',
+      transaction: {
+        description: '',
+        value: 0,
+        type: 'DEBIT',
+      },
       balance: 0,
     };
   }
 
   componentDidMount() {
-    const strTransactions = window.localStorage.getItem('@transactions');
-    const transactions = JSON.parse(strTransactions);
+    const transactions = loadFromStorage();
     if (transactions) {
-      this.setState(
-        {
-          transactions,
-        },
-        this.calculateBalance
-      );
+      const balance = calculateBalance(transactions);
+      this.setState({ transactions, balance });
     }
   }
 
@@ -38,69 +41,53 @@ export default class Home extends Component {
       showModal: !prevState.showModal,
     }));
 
-  addTransactions = e => {
+  submitForm = e => {
     e.preventDefault();
-    const { value, category, description, type } = this.state;
-    this.setState(
-      prevState => ({
-        transactions: [
-          ...prevState.transactions,
-          { id: uuidv4(), value, category, description, type },
-        ],
-      }),
-      () => {
-        this.calculateBalance();
-        this.saveInStorage();
-      }
-    );
+    const { transaction, transactions } = this.state;
 
-    this.toggleModal();
-    this.clearFields();
+    if (this.isValidForm(transaction)) {
+      const newTransactions = addItem(transactions, transaction);
+      const balance = calculateBalance(newTransactions);
+      this.saveData(balance, newTransactions);
+      this.clearFields();
+      this.toggleModal();
+    }
+  };
+
+  saveData = (balance, transactions) => {
+    this.setState({
+      balance,
+      transactions,
+    });
+    saveInStorage(transactions);
   };
 
   clearFields = () => {
     this.setState({
-      description: '',
-      type: 'DEBIT',
-      value: 0,
+      transaction: {
+        description: '',
+        type: 'DEBIT',
+        value: 0,
+      },
     });
+  };
+
+  isValidForm = transaction => {
+    if (transaction.description && transaction.value) return true;
+    return false;
   };
 
   onChangeField = (field, value) => {
-    this.setState({
-      [field]: value,
-    });
-  };
-
-  calculateBalance = () => {
-    const { transactions } = this.state;
-
-    const balance = transactions.reduce((acc, current) => {
-      if (current.type === 'DEBIT') {
-        return parseInt(acc, 10) - parseInt(current.value, 10);
-      }
-      return parseInt(acc, 10) + parseInt(current.value, 10);
-    }, 0);
-
-    this.setState({
-      balance,
-    });
-  };
-
-  saveInStorage = () => {
-    const { transactions } = this.state;
-    window.localStorage.setItem('@transactions', JSON.stringify(transactions));
+    this.setState(prevState => ({
+      transaction: {
+        ...prevState.transaction,
+        [field]: value,
+      },
+    }));
   };
 
   render() {
-    const {
-      showModal,
-      transactions,
-      description,
-      type,
-      value,
-      balance,
-    } = this.state;
+    const { showModal, transactions, transaction, balance } = this.state;
     return (
       <>
         <div className="container">
@@ -115,11 +102,9 @@ export default class Home extends Component {
         <Modal
           show={showModal}
           toggleModal={this.toggleModal}
-          addTransactions={this.addTransactions}
+          submitForm={this.submitForm}
           onChangeField={this.onChangeField}
-          value={value}
-          type={type}
-          description={description}
+          transaction={transaction}
         />
       </>
     );
