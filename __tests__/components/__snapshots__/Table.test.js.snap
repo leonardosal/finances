@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Table component with correct list of transactions 1`] = `
+<Table
+  transactions={
+    Array [
+      Object {
+        "description": "Uber",
+        "id": "A",
+        "type": "DEBIT",
+        "value": 17,
+      },
+      Object {
+        "description": "Salary",
+        "id": "B",
+        "type": "CREDIT",
+        "value": 2000,
+      },
+    ]
+  }
+>
+  <Row
+    description="Uber"
+    key="A"
+    type="DEBIT"
+    value={17}
+  >
+    <div
+      className="row"
+    >
+      <span>
+        Uber
+      </span>
+      <span
+        className="debit"
+      >
+        R$ 17.00
+      </span>
+    </div>
+  </Row>
+  <Row
+    description="Salary"
+    key="B"
+    type="CREDIT"
+    value={2000}
+  >
+    <div
+      className="row"
+    >
+      <span>
+        Salary
+      </span>
+      <span
+        className="credit"
+      >
+        R$ 2,000.00
+      </span>
+    </div>
+  </Row>
+</Table>
+`;

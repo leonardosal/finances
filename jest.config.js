@@ -7,7 +7,7 @@ module.exports = {
     '!<rootDir>/src/index.js',
   ],
   coverageDirectory: '__tests__/coverage',
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: ['<rootDir>__tests__/setupTests.js'],
   testMatch: ['**/__tests__/**/*.test.js'],
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'babel-jest',

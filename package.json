@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --open --mode development",
     "build": "webpack --mode production",
-    "test": "jest && codecov"
+    "test": "jest"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -26,6 +26,9 @@
     "babel-loader": "^8.0.6",
     "codecov": "^3.6.1",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",

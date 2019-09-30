@@ -93,7 +93,7 @@ export default class Home extends Component {
       <>
         <div className="container">
           <div className="box">
-            <CardInfo balance={balance} toggleModal={this.toggleModal} />
+            <CardInfo balance={balance} handleClick={this.toggleModal} />
           </div>
           <div className="separator" />
           <div className="box">

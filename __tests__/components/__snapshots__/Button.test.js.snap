@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render button component with label "Add" 1`] = `
+<Button
+  label="Add"
+  onClick={[Function]}
+  type="button"
+>
+  <button
+    className="button"
+    onClick={[Function]}
+    type="button"
+  >
+    Add
+  </button>
+</Button>
+`;

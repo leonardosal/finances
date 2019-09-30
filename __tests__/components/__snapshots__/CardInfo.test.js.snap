@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render card component with correct balance value 1`] = `
+<CardInfo
+  balance={0}
+  handleClick={[Function]}
+>
+  <div
+    className="card-info"
+  >
+    <div>
+      <h5>
+        Saldo
+      </h5>
+      <h2>
+        R$ 0.00
+      </h2>
+    </div>
+    <Button
+      label="Adicionar Transação"
+      onClick={[Function]}
+      type="button"
+    >
+      <button
+        className="button"
+        onClick={[Function]}
+        type="button"
+      >
+        Adicionar Transação
+      </button>
+    </Button>
+  </div>
+</CardInfo>
+`;
