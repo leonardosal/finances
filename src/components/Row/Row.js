@@ -3,12 +3,12 @@ import propTypes from 'prop-types';
 
 import './row.scss';
 
-import { formatValue } from '../../utils';
+import { formatValue, TYPE } from '../../utils';
 
 const Row = ({ description, value, type }) => (
   <div className="row">
     <span>{description}</span>
-    <span className={type === 'DEBIT' ? 'debit' : 'credit'}>
+    <span className={type === TYPE.DEBIT ? 'debit' : 'credit'}>
       {formatValue(value)}
     </span>
   </div>
@@ -22,7 +22,7 @@ Row.propTypes = {
 
 Row.defaultProps = {
   description: '',
-  type: 'CREDIT',
+  type: TYPE.CREDIT,
   value: 0,
 };
 

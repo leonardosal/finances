@@ -1,5 +1,10 @@
 import uuidv4 from 'uuid/v4';
 
+export const TYPE = {
+  DEBIT: 'DEBIT',
+  CREDIT: 'CREDIT',
+};
+
 export const formatValue = value => {
   return parseInt(value, 10).toLocaleString('pt-br', {
     minimumFractionDigits: 2,
@@ -10,7 +15,7 @@ export const formatValue = value => {
 
 export const calculateBalance = transactions => {
   return transactions.reduce((acc, current) => {
-    if (current.type === 'DEBIT') {
+    if (current.type === TYPE.DEBIT) {
       return parseInt(acc, 10) - parseInt(current.value, 10);
     }
     return parseInt(acc, 10) + parseInt(current.value, 10);

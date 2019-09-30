@@ -9,6 +9,7 @@ import {
   saveInStorage,
   loadFromStorage,
   addItem,
+  TYPE,
 } from '../../utils';
 
 import './home.scss';
@@ -22,7 +23,7 @@ export default class Home extends Component {
       transaction: {
         description: '',
         value: 0,
-        type: 'DEBIT',
+        type: TYPE.DEBIT,
       },
       balance: 0,
     };
@@ -66,7 +67,7 @@ export default class Home extends Component {
     this.setState({
       transaction: {
         description: '',
-        type: 'DEBIT',
+        type: TYPE.DEBIT,
         value: 0,
       },
     });
