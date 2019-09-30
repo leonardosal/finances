@@ -1,53 +1,130 @@
 import React, { Component } from 'react';
+import uuidv4 from 'uuid/v4';
 
 import './home.scss';
 
+import Modal from '../../components/Modal';
+import Table from '../../components/Table';
+import CardInfo from '../../components/CardInfo';
+
 export default class Home extends Component {
-  addExpenses = () => {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+      transactions: [],
+      category: '',
+      description: '',
+      value: 0,
+      type: 'DEBIT',
+      balance: 0,
+    };
+  }
+
+  componentDidMount() {
+    const strTransactions = window.localStorage.getItem('@transactions');
+    const transactions = JSON.parse(strTransactions);
+    if (transactions) {
+      this.setState(
+        {
+          transactions,
+        },
+        this.calculateBalance
+      );
+    }
+  }
+
+  toggleModal = () =>
+    this.setState(prevState => ({
+      showModal: !prevState.showModal,
+    }));
+
+  addTransactions = e => {
+    e.preventDefault();
+    const { value, category, description, type } = this.state;
+    this.setState(
+      prevState => ({
+        transactions: [
+          ...prevState.transactions,
+          { id: uuidv4(), value, category, description, type },
+        ],
+      }),
+      () => {
+        this.calculateBalance();
+        this.saveInStorage();
+      }
+    );
+
+    this.toggleModal();
+    this.clearFields();
+  };
+
+  clearFields = () => {
+    this.setState({
+      category: '',
+      description: '',
+      value: 0,
+    });
+  };
+
+  onChangeField = (field, value) => {
+    this.setState({
+      [field]: value,
+    });
+  };
+
+  calculateBalance = () => {
+    const { transactions } = this.state;
+
+    const balance = transactions.reduce((acc, current) => {
+      if (current.type === 'DEBIT') {
+        return parseInt(acc, 10) - parseInt(current.value, 10);
+      }
+      return parseInt(acc, 10) + parseInt(current.value, 10);
+    }, 0);
+
+    this.setState({
+      balance,
+    });
+  };
+
+  saveInStorage = () => {
+    const { transactions } = this.state;
+    window.localStorage.setItem('@transactions', JSON.stringify(transactions));
+  };
 
   render() {
+    const {
+      showModal,
+      transactions,
+      category,
+      description,
+      type,
+      value,
+      balance,
+    } = this.state;
     return (
-      <div className="container">
-        <button className="button" type="button">
-          Adicionar
-        </button>
-        <div className="box">
-          {[
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24,
-            25,
-            26,
-          ].map((_, index) => (
-            <div key={index + 1} className="row">
-              <span>Almoço</span>
-              <span>Alimentação</span>
-              <span>R$ 100,00</span>
-            </div>
-          ))}
+      <>
+        <div className="container">
+          <div className="box">
+            <CardInfo balance={balance} toggleModal={this.toggleModal} />
+          </div>
+          <div className="separator" />
+          <div className="box">
+            <Table transactions={transactions} />
+          </div>
         </div>
-      </div>
+        <Modal
+          show={showModal}
+          toggleModal={this.toggleModal}
+          addTransactions={this.addTransactions}
+          onChangeField={this.onChangeField}
+          category={category}
+          value={value}
+          type={type}
+          description={description}
+        />
+      </>
     );
   }
 }

@@ -1,8 +1,11 @@
 .header {
   height: 50px;
   padding: 16px;
-  background-color: #0ff;
+  background-color: #6200ee;
   font-size: 1.5rem;
+  color: #fff;
   display: flex;
   align-items: center;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }

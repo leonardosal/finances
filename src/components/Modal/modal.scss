@@ -1,0 +1,59 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.show {
+    display: block;
+  }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 480px;
+
+  @media (min-width: 1025px) {
+    max-width: 480px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    padding: 16px 0px;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+  }
+
+  select {
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

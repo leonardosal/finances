@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  @media (min-width: 1025px) {
+    font-size: 1rem;
+  }
+
+  .credit {
+    color: #04a11e;
+  }
+  .debit {
+    color: #e62705;
+  }
+}
