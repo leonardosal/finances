@@ -3,7 +3,8 @@
 [![License](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
 ## Aplicação rodando no Heroku
-
+[Finances](https://financesapp.herokuapp.com)
+(Ao acessar pela primeira vez pode demorar alguns segundos por conta das máquinas free do heroku)
 
 ## Requisitos para instalação local
 
