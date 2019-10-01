@@ -30,16 +30,18 @@ exports[`should render App component 1`] = `
                 Saldo
               </h5>
               <h2>
-                R$ 0.00
+                R$0,00
               </h2>
             </div>
             <Button
+              id="btn-open"
               label="Adicionar Transação"
               onClick={[Function]}
               type="button"
             >
               <button
                 className="button"
+                id="btn-open"
                 onClick={[Function]}
                 type="button"
               >
@@ -85,6 +87,7 @@ exports[`should render App component 1`] = `
           </h3>
           <form
             className="form"
+            id="transactionForm"
             name="transactionForm"
             onSubmit={[Function]}
           >
@@ -93,6 +96,7 @@ exports[`should render App component 1`] = `
             >
               Tipo
               <select
+                id="type"
                 name="type"
                 onChange={[Function]}
                 value="DEBIT"
@@ -114,6 +118,7 @@ exports[`should render App component 1`] = `
             >
               Valor
               <input
+                id="value"
                 name="value"
                 onChange={[Function]}
                 type="number"
@@ -125,6 +130,7 @@ exports[`should render App component 1`] = `
             >
               Descrição
               <input
+                id="description"
                 name="description"
                 onChange={[Function]}
                 value=""
@@ -134,12 +140,14 @@ exports[`should render App component 1`] = `
               className="footer"
             >
               <Button
+                id="btn-save"
                 label="Salvar"
                 onClick={[Function]}
                 type="submit"
               >
                 <button
                   className="button"
+                  id="btn-save"
                   onClick={[Function]}
                   type="submit"
                 >
@@ -147,12 +155,14 @@ exports[`should render App component 1`] = `
                 </button>
               </Button>
               <Button
+                id="btn-cancel"
                 label="Cancelar"
                 onClick={[Function]}
                 type="button"
               >
                 <button
                   className="button"
+                  id="btn-cancel"
                   onClick={[Function]}
                   type="button"
                 >

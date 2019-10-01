@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Modal component 1`] = `
+<Modal
+  onChangeField={[Function]}
+  show={false}
+  submitForm={[Function]}
+  toggleModal={[Function]}
+  transaction={
+    Object {
+      "description": "",
+      "type": "DEBIT",
+      "value": 0,
+    }
+  }
+>
+  <div
+    className="modal"
+    id="modal"
+  >
+    <div
+      className="modal-content"
+    >
+      <h3>
+        Adicionar transação
+      </h3>
+      <form
+        className="form"
+        id="transactionForm"
+        name="transactionForm"
+        onSubmit={[Function]}
+      >
+        <label
+          htmlFor="type"
+        >
+          Tipo
+          <select
+            id="type"
+            name="type"
+            onChange={[Function]}
+            value="DEBIT"
+          >
+            <option
+              value="DEBIT"
+            >
+              Despesa
+            </option>
+            <option
+              value="CREDIT"
+            >
+              Receita
+            </option>
+          </select>
+        </label>
+        <label
+          htmlFor="value"
+        >
+          Valor
+          <input
+            id="value"
+            name="value"
+            onChange={[Function]}
+            type="number"
+            value={0}
+          />
+        </label>
+        <label
+          htmlFor="description"
+        >
+          Descrição
+          <input
+            id="description"
+            name="description"
+            onChange={[Function]}
+            value=""
+          />
+        </label>
+        <div
+          className="footer"
+        >
+          <Button
+            id="btn-save"
+            label="Salvar"
+            onClick={[Function]}
+            type="submit"
+          >
+            <button
+              className="button"
+              id="btn-save"
+              onClick={[Function]}
+              type="submit"
+            >
+              Salvar
+            </button>
+          </Button>
+          <Button
+            id="btn-cancel"
+            label="Cancelar"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-cancel"
+              onClick={[Function]}
+              type="button"
+            >
+              Cancelar
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`should render Modal component when change values 1`] = `
+<Modal
+  onChangeField={[Function]}
+  show={true}
+  submitForm={[Function]}
+  toggleModal={[Function]}
+  transaction={
+    Object {
+      "description": "",
+      "type": "DEBIT",
+      "value": 0,
+    }
+  }
+>
+  <div
+    className="modal show"
+    id="modal"
+  >
+    <div
+      className="modal-content"
+    >
+      <h3>
+        Adicionar transação
+      </h3>
+      <form
+        className="form"
+        id="transactionForm"
+        name="transactionForm"
+        onSubmit={[Function]}
+      >
+        <label
+          htmlFor="type"
+        >
+          Tipo
+          <select
+            id="type"
+            name="type"
+            onChange={[Function]}
+            value="DEBIT"
+          >
+            <option
+              value="DEBIT"
+            >
+              Despesa
+            </option>
+            <option
+              value="CREDIT"
+            >
+              Receita
+            </option>
+          </select>
+        </label>
+        <label
+          htmlFor="value"
+        >
+          Valor
+          <input
+            id="value"
+            name="value"
+            onChange={[Function]}
+            type="number"
+            value={0}
+          />
+        </label>
+        <label
+          htmlFor="description"
+        >
+          Descrição
+          <input
+            id="description"
+            name="description"
+            onChange={[Function]}
+            value=""
+          />
+        </label>
+        <div
+          className="footer"
+        >
+          <Button
+            id="btn-save"
+            label="Salvar"
+            onClick={[Function]}
+            type="submit"
+          >
+            <button
+              className="button"
+              id="btn-save"
+              onClick={[Function]}
+              type="submit"
+            >
+              Salvar
+            </button>
+          </Button>
+          <Button
+            id="btn-cancel"
+            label="Cancelar"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-cancel"
+              onClick={[Function]}
+              type="button"
+            >
+              Cancelar
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`should render Modal component when show is true 1`] = `
+<Modal
+  onChangeField={[Function]}
+  show={true}
+  submitForm={[Function]}
+  toggleModal={[Function]}
+  transaction={
+    Object {
+      "description": "Uber",
+      "type": "submit",
+      "value": 17,
+    }
+  }
+>
+  <div
+    className="modal show"
+    id="modal"
+  >
+    <div
+      className="modal-content"
+    >
+      <h3>
+        Adicionar transação
+      </h3>
+      <form
+        className="form"
+        id="transactionForm"
+        name="transactionForm"
+        onSubmit={[Function]}
+      >
+        <label
+          htmlFor="type"
+        >
+          Tipo
+          <select
+            id="type"
+            name="type"
+            onChange={[Function]}
+            value="submit"
+          >
+            <option
+              value="DEBIT"
+            >
+              Despesa
+            </option>
+            <option
+              value="CREDIT"
+            >
+              Receita
+            </option>
+          </select>
+        </label>
+        <label
+          htmlFor="value"
+        >
+          Valor
+          <input
+            id="value"
+            name="value"
+            onChange={[Function]}
+            type="number"
+            value={17}
+          />
+        </label>
+        <label
+          htmlFor="description"
+        >
+          Descrição
+          <input
+            id="description"
+            name="description"
+            onChange={[Function]}
+            value="Uber"
+          />
+        </label>
+        <div
+          className="footer"
+        >
+          <Button
+            id="btn-save"
+            label="Salvar"
+            onClick={[Function]}
+            type="submit"
+          >
+            <button
+              className="button"
+              id="btn-save"
+              onClick={[Function]}
+              type="submit"
+            >
+              Salvar
+            </button>
+          </Button>
+          <Button
+            id="btn-cancel"
+            label="Cancelar"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-cancel"
+              onClick={[Function]}
+              type="button"
+            >
+              Cancelar
+            </button>
+          </Button>
+        </div>
+      </form>
+    </div>
+  </div>
+</Modal>
+`;

@@ -10,5 +10,6 @@ it('should render button component with label "Add"', () => {
     onClick: () => true,
   };
   const component = mount(<Button label={props.label} />);
+  component.find('button').simulate('click');
   expect(toJson(component)).toMatchSnapshot();
 });

@@ -15,7 +15,7 @@ exports[`should render Row component with correct data props for expense 1`] = `
     <span
       className="debit"
     >
-      R$ 17.00
+      R$17,00
     </span>
   </div>
 </Row>
@@ -36,7 +36,7 @@ exports[`should render Row component with correct data props for revenue 1`] = `
     <span
       className="credit"
     >
-      R$ 2,000.00
+      R$2.000,00
     </span>
   </div>
 </Row>

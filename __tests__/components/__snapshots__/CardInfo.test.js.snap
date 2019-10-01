@@ -13,16 +13,18 @@ exports[`should render card component with correct balance value 1`] = `
         Saldo
       </h5>
       <h2>
-        R$ 0.00
+        R$0,00
       </h2>
     </div>
     <Button
+      id="btn-open"
       label="Adicionar Transação"
       onClick={[Function]}
       type="button"
     >
       <button
         className="button"
+        id="btn-open"
         onClick={[Function]}
         type="button"
       >

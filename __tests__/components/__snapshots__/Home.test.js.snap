@@ -1,0 +1,1191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Home component when add transaction and cancel 1`] = `
+<Home>
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <CardInfo
+        balance={790}
+        handleClick={[Function]}
+      >
+        <div
+          className="card-info"
+        >
+          <div>
+            <h5>
+              Saldo
+            </h5>
+            <h2>
+              R$790,00
+            </h2>
+          </div>
+          <Button
+            id="btn-open"
+            label="Adicionar Transação"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-open"
+              onClick={[Function]}
+              type="button"
+            >
+              Adicionar Transação
+            </button>
+          </Button>
+        </div>
+      </CardInfo>
+    </div>
+    <div
+      className="separator"
+    />
+    <div
+      className="box"
+    >
+      <Table
+        transactions={
+          Array [
+            Object {
+              "description": "Uber",
+              "id": "b92673a3-29f0-49c8-a6d2-0933406cb778",
+              "type": "DEBIT",
+              "value": 10,
+            },
+            Object {
+              "id": "0000-0000-0000",
+              "type": "CREDIT",
+              "value": 1000,
+            },
+            Object {
+              "id": "0000-0000-0001",
+              "type": "DEBIT",
+              "value": 100,
+            },
+            Object {
+              "id": "0000-0000-0002",
+              "type": "DEBIT",
+              "value": 100,
+            },
+          ]
+        }
+      >
+        <Row
+          description="Uber"
+          key="b92673a3-29f0-49c8-a6d2-0933406cb778"
+          type="DEBIT"
+          value={10}
+        >
+          <div
+            className="row"
+          >
+            <span>
+              Uber
+            </span>
+            <span
+              className="debit"
+            >
+              R$10,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0000"
+          type="CREDIT"
+          value={1000}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="credit"
+            >
+              R$1.000,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0001"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0002"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+      </Table>
+    </div>
+  </div>
+  <Modal
+    onChangeField={[Function]}
+    show={false}
+    submitForm={[Function]}
+    toggleModal={[Function]}
+    transaction={
+      Object {
+        "description": "",
+        "type": "DEBIT",
+        "value": 0,
+      }
+    }
+  >
+    <div
+      className="modal"
+      id="modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <h3>
+          Adicionar transação
+        </h3>
+        <form
+          className="form"
+          id="transactionForm"
+          name="transactionForm"
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="type"
+          >
+            Tipo
+            <select
+              id="type"
+              name="type"
+              onChange={[Function]}
+              value="DEBIT"
+            >
+              <option
+                value="DEBIT"
+              >
+                Despesa
+              </option>
+              <option
+                value="CREDIT"
+              >
+                Receita
+              </option>
+            </select>
+          </label>
+          <label
+            htmlFor="value"
+          >
+            Valor
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              type="number"
+              value={0}
+            />
+          </label>
+          <label
+            htmlFor="description"
+          >
+            Descrição
+            <input
+              id="description"
+              name="description"
+              onChange={[Function]}
+              value=""
+            />
+          </label>
+          <div
+            className="footer"
+          >
+            <Button
+              id="btn-save"
+              label="Salvar"
+              onClick={[Function]}
+              type="submit"
+            >
+              <button
+                className="button"
+                id="btn-save"
+                onClick={[Function]}
+                type="submit"
+              >
+                Salvar
+              </button>
+            </Button>
+            <Button
+              id="btn-cancel"
+              label="Cancelar"
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="button"
+                id="btn-cancel"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancelar
+              </button>
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Modal>
+</Home>
+`;
+
+exports[`should render Home component when add transaction with invalid data 1`] = `
+<Home>
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <CardInfo
+        balance={790}
+        handleClick={[Function]}
+      >
+        <div
+          className="card-info"
+        >
+          <div>
+            <h5>
+              Saldo
+            </h5>
+            <h2>
+              R$790,00
+            </h2>
+          </div>
+          <Button
+            id="btn-open"
+            label="Adicionar Transação"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-open"
+              onClick={[Function]}
+              type="button"
+            >
+              Adicionar Transação
+            </button>
+          </Button>
+        </div>
+      </CardInfo>
+    </div>
+    <div
+      className="separator"
+    />
+    <div
+      className="box"
+    >
+      <Table
+        transactions={
+          Array [
+            Object {
+              "description": "Uber",
+              "id": "b92673a3-29f0-49c8-a6d2-0933406cb778",
+              "type": "DEBIT",
+              "value": 10,
+            },
+            Object {
+              "id": "0000-0000-0000",
+              "type": "CREDIT",
+              "value": 1000,
+            },
+            Object {
+              "id": "0000-0000-0001",
+              "type": "DEBIT",
+              "value": 100,
+            },
+            Object {
+              "id": "0000-0000-0002",
+              "type": "DEBIT",
+              "value": 100,
+            },
+          ]
+        }
+      >
+        <Row
+          description="Uber"
+          key="b92673a3-29f0-49c8-a6d2-0933406cb778"
+          type="DEBIT"
+          value={10}
+        >
+          <div
+            className="row"
+          >
+            <span>
+              Uber
+            </span>
+            <span
+              className="debit"
+            >
+              R$10,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0000"
+          type="CREDIT"
+          value={1000}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="credit"
+            >
+              R$1.000,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0001"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0002"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+      </Table>
+    </div>
+  </div>
+  <Modal
+    onChangeField={[Function]}
+    show={true}
+    submitForm={[Function]}
+    toggleModal={[Function]}
+    transaction={
+      Object {
+        "description": "",
+        "type": "DEBIT",
+        "value": 0,
+      }
+    }
+  >
+    <div
+      className="modal show"
+      id="modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <h3>
+          Adicionar transação
+        </h3>
+        <form
+          className="form"
+          id="transactionForm"
+          name="transactionForm"
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="type"
+          >
+            Tipo
+            <select
+              id="type"
+              name="type"
+              onChange={[Function]}
+              value="DEBIT"
+            >
+              <option
+                value="DEBIT"
+              >
+                Despesa
+              </option>
+              <option
+                value="CREDIT"
+              >
+                Receita
+              </option>
+            </select>
+          </label>
+          <label
+            htmlFor="value"
+          >
+            Valor
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              type="number"
+              value={0}
+            />
+          </label>
+          <label
+            htmlFor="description"
+          >
+            Descrição
+            <input
+              id="description"
+              name="description"
+              onChange={[Function]}
+              value=""
+            />
+          </label>
+          <div
+            className="footer"
+          >
+            <Button
+              id="btn-save"
+              label="Salvar"
+              onClick={[Function]}
+              type="submit"
+            >
+              <button
+                className="button"
+                id="btn-save"
+                onClick={[Function]}
+                type="submit"
+              >
+                Salvar
+              </button>
+            </Button>
+            <Button
+              id="btn-cancel"
+              label="Cancelar"
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="button"
+                id="btn-cancel"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancelar
+              </button>
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Modal>
+</Home>
+`;
+
+exports[`should render Home component when add transaction with valid data 1`] = `
+<Home>
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <CardInfo
+        balance={790}
+        handleClick={[Function]}
+      >
+        <div
+          className="card-info"
+        >
+          <div>
+            <h5>
+              Saldo
+            </h5>
+            <h2>
+              R$790,00
+            </h2>
+          </div>
+          <Button
+            id="btn-open"
+            label="Adicionar Transação"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-open"
+              onClick={[Function]}
+              type="button"
+            >
+              Adicionar Transação
+            </button>
+          </Button>
+        </div>
+      </CardInfo>
+    </div>
+    <div
+      className="separator"
+    />
+    <div
+      className="box"
+    >
+      <Table
+        transactions={
+          Array [
+            Object {
+              "description": "Uber",
+              "id": "b92673a3-29f0-49c8-a6d2-0933406cb778",
+              "type": "DEBIT",
+              "value": 10,
+            },
+            Object {
+              "id": "0000-0000-0000",
+              "type": "CREDIT",
+              "value": 1000,
+            },
+            Object {
+              "id": "0000-0000-0001",
+              "type": "DEBIT",
+              "value": 100,
+            },
+            Object {
+              "id": "0000-0000-0002",
+              "type": "DEBIT",
+              "value": 100,
+            },
+          ]
+        }
+      >
+        <Row
+          description="Uber"
+          key="b92673a3-29f0-49c8-a6d2-0933406cb778"
+          type="DEBIT"
+          value={10}
+        >
+          <div
+            className="row"
+          >
+            <span>
+              Uber
+            </span>
+            <span
+              className="debit"
+            >
+              R$10,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0000"
+          type="CREDIT"
+          value={1000}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="credit"
+            >
+              R$1.000,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0001"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0002"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+      </Table>
+    </div>
+  </div>
+  <Modal
+    onChangeField={[Function]}
+    show={false}
+    submitForm={[Function]}
+    toggleModal={[Function]}
+    transaction={
+      Object {
+        "description": "",
+        "type": "DEBIT",
+        "value": 0,
+      }
+    }
+  >
+    <div
+      className="modal"
+      id="modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <h3>
+          Adicionar transação
+        </h3>
+        <form
+          className="form"
+          id="transactionForm"
+          name="transactionForm"
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="type"
+          >
+            Tipo
+            <select
+              id="type"
+              name="type"
+              onChange={[Function]}
+              value="DEBIT"
+            >
+              <option
+                value="DEBIT"
+              >
+                Despesa
+              </option>
+              <option
+                value="CREDIT"
+              >
+                Receita
+              </option>
+            </select>
+          </label>
+          <label
+            htmlFor="value"
+          >
+            Valor
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              type="number"
+              value={0}
+            />
+          </label>
+          <label
+            htmlFor="description"
+          >
+            Descrição
+            <input
+              id="description"
+              name="description"
+              onChange={[Function]}
+              value=""
+            />
+          </label>
+          <div
+            className="footer"
+          >
+            <Button
+              id="btn-save"
+              label="Salvar"
+              onClick={[Function]}
+              type="submit"
+            >
+              <button
+                className="button"
+                id="btn-save"
+                onClick={[Function]}
+                type="submit"
+              >
+                Salvar
+              </button>
+            </Button>
+            <Button
+              id="btn-cancel"
+              label="Cancelar"
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="button"
+                id="btn-cancel"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancelar
+              </button>
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Modal>
+</Home>
+`;
+
+exports[`should render Home component with data saved 1`] = `
+<Home>
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <CardInfo
+        balance={800}
+        handleClick={[Function]}
+      >
+        <div
+          className="card-info"
+        >
+          <div>
+            <h5>
+              Saldo
+            </h5>
+            <h2>
+              R$800,00
+            </h2>
+          </div>
+          <Button
+            id="btn-open"
+            label="Adicionar Transação"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-open"
+              onClick={[Function]}
+              type="button"
+            >
+              Adicionar Transação
+            </button>
+          </Button>
+        </div>
+      </CardInfo>
+    </div>
+    <div
+      className="separator"
+    />
+    <div
+      className="box"
+    >
+      <Table
+        transactions={
+          Array [
+            Object {
+              "id": "0000-0000-0000",
+              "type": "CREDIT",
+              "value": 1000,
+            },
+            Object {
+              "id": "0000-0000-0001",
+              "type": "DEBIT",
+              "value": 100,
+            },
+            Object {
+              "id": "0000-0000-0002",
+              "type": "DEBIT",
+              "value": 100,
+            },
+          ]
+        }
+      >
+        <Row
+          description=""
+          key="0000-0000-0000"
+          type="CREDIT"
+          value={1000}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="credit"
+            >
+              R$1.000,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0001"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+        <Row
+          description=""
+          key="0000-0000-0002"
+          type="DEBIT"
+          value={100}
+        >
+          <div
+            className="row"
+          >
+            <span />
+            <span
+              className="debit"
+            >
+              R$100,00
+            </span>
+          </div>
+        </Row>
+      </Table>
+    </div>
+  </div>
+  <Modal
+    onChangeField={[Function]}
+    show={false}
+    submitForm={[Function]}
+    toggleModal={[Function]}
+    transaction={
+      Object {
+        "description": "",
+        "type": "DEBIT",
+        "value": 0,
+      }
+    }
+  >
+    <div
+      className="modal"
+      id="modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <h3>
+          Adicionar transação
+        </h3>
+        <form
+          className="form"
+          id="transactionForm"
+          name="transactionForm"
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="type"
+          >
+            Tipo
+            <select
+              id="type"
+              name="type"
+              onChange={[Function]}
+              value="DEBIT"
+            >
+              <option
+                value="DEBIT"
+              >
+                Despesa
+              </option>
+              <option
+                value="CREDIT"
+              >
+                Receita
+              </option>
+            </select>
+          </label>
+          <label
+            htmlFor="value"
+          >
+            Valor
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              type="number"
+              value={0}
+            />
+          </label>
+          <label
+            htmlFor="description"
+          >
+            Descrição
+            <input
+              id="description"
+              name="description"
+              onChange={[Function]}
+              value=""
+            />
+          </label>
+          <div
+            className="footer"
+          >
+            <Button
+              id="btn-save"
+              label="Salvar"
+              onClick={[Function]}
+              type="submit"
+            >
+              <button
+                className="button"
+                id="btn-save"
+                onClick={[Function]}
+                type="submit"
+              >
+                Salvar
+              </button>
+            </Button>
+            <Button
+              id="btn-cancel"
+              label="Cancelar"
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="button"
+                id="btn-cancel"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancelar
+              </button>
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Modal>
+</Home>
+`;
+
+exports[`should render Home component without data saved 1`] = `
+<Home>
+  <div
+    className="container"
+  >
+    <div
+      className="box"
+    >
+      <CardInfo
+        balance={0}
+        handleClick={[Function]}
+      >
+        <div
+          className="card-info"
+        >
+          <div>
+            <h5>
+              Saldo
+            </h5>
+            <h2>
+              R$0,00
+            </h2>
+          </div>
+          <Button
+            id="btn-open"
+            label="Adicionar Transação"
+            onClick={[Function]}
+            type="button"
+          >
+            <button
+              className="button"
+              id="btn-open"
+              onClick={[Function]}
+              type="button"
+            >
+              Adicionar Transação
+            </button>
+          </Button>
+        </div>
+      </CardInfo>
+    </div>
+    <div
+      className="separator"
+    />
+    <div
+      className="box"
+    >
+      <Table
+        transactions={Array []}
+      />
+    </div>
+  </div>
+  <Modal
+    onChangeField={[Function]}
+    show={false}
+    submitForm={[Function]}
+    toggleModal={[Function]}
+    transaction={
+      Object {
+        "description": "",
+        "type": "DEBIT",
+        "value": 0,
+      }
+    }
+  >
+    <div
+      className="modal"
+      id="modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <h3>
+          Adicionar transação
+        </h3>
+        <form
+          className="form"
+          id="transactionForm"
+          name="transactionForm"
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="type"
+          >
+            Tipo
+            <select
+              id="type"
+              name="type"
+              onChange={[Function]}
+              value="DEBIT"
+            >
+              <option
+                value="DEBIT"
+              >
+                Despesa
+              </option>
+              <option
+                value="CREDIT"
+              >
+                Receita
+              </option>
+            </select>
+          </label>
+          <label
+            htmlFor="value"
+          >
+            Valor
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              type="number"
+              value={0}
+            />
+          </label>
+          <label
+            htmlFor="description"
+          >
+            Descrição
+            <input
+              id="description"
+              name="description"
+              onChange={[Function]}
+              value=""
+            />
+          </label>
+          <div
+            className="footer"
+          >
+            <Button
+              id="btn-save"
+              label="Salvar"
+              onClick={[Function]}
+              type="submit"
+            >
+              <button
+                className="button"
+                id="btn-save"
+                onClick={[Function]}
+                type="submit"
+              >
+                Salvar
+              </button>
+            </Button>
+            <Button
+              id="btn-cancel"
+              label="Cancelar"
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="button"
+                id="btn-cancel"
+                onClick={[Function]}
+                type="button"
+              >
+                Cancelar
+              </button>
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Modal>
+</Home>
+`;

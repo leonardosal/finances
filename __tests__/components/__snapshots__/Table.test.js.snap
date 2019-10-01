@@ -34,7 +34,7 @@ exports[`should render Table component with correct list of transactions 1`] = `
       <span
         className="debit"
       >
-        R$ 17.00
+        R$17,00
       </span>
     </div>
   </Row>
@@ -53,7 +53,7 @@ exports[`should render Table component with correct list of transactions 1`] = `
       <span
         className="credit"
       >
-        R$ 2,000.00
+        R$2.000,00
       </span>
     </div>
   </Row>

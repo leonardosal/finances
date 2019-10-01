@@ -2,12 +2,14 @@
 
 exports[`should render button component with label "Add" 1`] = `
 <Button
+  id=""
   label="Add"
   onClick={[Function]}
   type="button"
 >
   <button
     className="button"
+    id=""
     onClick={[Function]}
     type="button"
   >

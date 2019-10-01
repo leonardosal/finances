@@ -15,11 +15,17 @@ const Modal = ({
     <div id="modal" className={show ? 'modal show' : 'modal'}>
       <div className="modal-content">
         <h3>Adicionar transação</h3>
-        <form name="transactionForm" className="form" onSubmit={submitForm}>
+        <form
+          id="transactionForm"
+          name="transactionForm"
+          className="form"
+          onSubmit={submitForm}
+        >
           <label htmlFor="type">
             Tipo
             <select
               name="type"
+              id="type"
               onChange={e => onChangeField('type', e.target.value)}
               value={transaction.type}
             >
@@ -30,6 +36,7 @@ const Modal = ({
           <label htmlFor="value">
             Valor
             <input
+              id="value"
               name="value"
               type="number"
               onChange={e => onChangeField('value', e.target.value)}
@@ -39,14 +46,20 @@ const Modal = ({
           <label htmlFor="description">
             Descrição
             <input
+              id="description"
               name="description"
               onChange={e => onChangeField('description', e.target.value)}
               value={transaction.description}
             />
           </label>
           <div className="footer">
-            <Button type="submit" label="Salvar" />
-            <Button type="button" label="Cancelar" onClick={toggleModal} />
+            <Button id="btn-save" type="submit" label="Salvar" />
+            <Button
+              id="btn-cancel"
+              type="button"
+              label="Cancelar"
+              onClick={toggleModal}
+            />
           </div>
         </form>
       </div>
@@ -71,7 +84,7 @@ Modal.defaultProps = {
   transaction: {
     value: 0,
     description: '',
-    type: 'button',
+    type: 'DEBIT',
   },
 };
 

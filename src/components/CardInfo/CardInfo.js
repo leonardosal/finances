@@ -13,7 +13,7 @@ const CardInfo = ({ balance, handleClick }) => (
       <h5>Saldo</h5>
       <h2>{formatValue(balance)}</h2>
     </div>
-    <Button label="Adicionar Transação" onClick={handleClick} />
+    <Button id="btn-open" label="Adicionar Transação" onClick={handleClick} />
   </div>
 );
 
