@@ -24,6 +24,11 @@ it('should render Home component with data saved', () => {
 });
 
 it('should render Home component when add transaction with valid data', () => {
+  jest.mock('uuid', () => {
+    return {
+      v4: jest.fn(() => '0000-0000-0000'),
+    };
+  });
   const component = mount(<Home />);
   component.find('button#btn-open').simulate('click');
   component.find('select#type').simulate('change', {

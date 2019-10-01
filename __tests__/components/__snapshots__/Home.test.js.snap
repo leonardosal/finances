@@ -52,7 +52,7 @@ exports[`should render Home component when add transaction and cancel 1`] = `
           Array [
             Object {
               "description": "Uber",
-              "id": "e281bc2d-1615-4db9-ae45-165b4dfff3db",
+              "id": "9bea6801-069f-4c8a-a45a-143b0e5e8f79",
               "type": "DEBIT",
               "value": 10,
             },
@@ -76,7 +76,7 @@ exports[`should render Home component when add transaction and cancel 1`] = `
       >
         <Row
           description="Uber"
-          key="e281bc2d-1615-4db9-ae45-165b4dfff3db"
+          key="9bea6801-069f-4c8a-a45a-143b0e5e8f79"
           type="DEBIT"
           value={10}
         >
@@ -314,7 +314,7 @@ exports[`should render Home component when add transaction with invalid data 1`]
           Array [
             Object {
               "description": "Uber",
-              "id": "e281bc2d-1615-4db9-ae45-165b4dfff3db",
+              "id": "9bea6801-069f-4c8a-a45a-143b0e5e8f79",
               "type": "DEBIT",
               "value": 10,
             },
@@ -338,7 +338,7 @@ exports[`should render Home component when add transaction with invalid data 1`]
       >
         <Row
           description="Uber"
-          key="e281bc2d-1615-4db9-ae45-165b4dfff3db"
+          key="9bea6801-069f-4c8a-a45a-143b0e5e8f79"
           type="DEBIT"
           value={10}
         >
@@ -576,7 +576,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
           Array [
             Object {
               "description": "Uber",
-              "id": "e281bc2d-1615-4db9-ae45-165b4dfff3db",
+              "id": "9bea6801-069f-4c8a-a45a-143b0e5e8f79",
               "type": "DEBIT",
               "value": 10,
             },
@@ -600,7 +600,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
       >
         <Row
           description="Uber"
-          key="e281bc2d-1615-4db9-ae45-165b4dfff3db"
+          key="9bea6801-069f-4c8a-a45a-143b0e5e8f79"
           type="DEBIT"
           value={10}
         >
