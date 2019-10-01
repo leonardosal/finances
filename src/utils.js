@@ -6,11 +6,12 @@ export const TYPE = {
 };
 
 export const formatValue = value => {
-  return parseInt(value, 10).toLocaleString('pt-br', {
+  const parsedValue = parseInt(value, 10);
+  return new Intl.NumberFormat('pt-BR', {
     minimumFractionDigits: 2,
     style: 'currency',
     currency: 'BRL',
-  });
+  }).format(parsedValue);
 };
 
 export const calculateBalance = transactions => {

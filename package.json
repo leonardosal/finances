@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --open --mode development",
     "build": "webpack --mode production",
-    "test": "jest"
+    "test": "jest && codecov"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
