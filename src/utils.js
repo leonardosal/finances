@@ -1,5 +1,6 @@
 import uuid from 'uuid';
 import Intl from 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
 
 export const TYPE = {
   DEBIT: 'DEBIT',
