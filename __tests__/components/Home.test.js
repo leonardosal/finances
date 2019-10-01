@@ -1,8 +1,11 @@
 import React from 'react';
+import uuid from 'uuid';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import '../../__mocks__/localStorage';
 import Home from '../../src/containers/Home';
+
+jest.mock('uuid');
 
 it('should render Home component without data saved', () => {
   const component = mount(<Home />);
@@ -24,11 +27,8 @@ it('should render Home component with data saved', () => {
 });
 
 it('should render Home component when add transaction with valid data', () => {
-  jest.mock('uuid', () => {
-    return {
-      v4: jest.fn(() => '0000-0000-0000'),
-    };
-  });
+  localStorage.clear();
+  uuid.v4.mockImplementationOnce(() => '0000-0000-0000');
   const component = mount(<Home />);
   component.find('button#btn-open').simulate('click');
   component.find('select#type').simulate('change', {
@@ -47,6 +47,7 @@ it('should render Home component when add transaction with valid data', () => {
 });
 
 it('should render Home component when add transaction with invalid data', () => {
+  uuid.v4.mockImplementationOnce(() => '0000-0000-0000');
   const component = mount(<Home />);
   component.find('button#btn-open').simulate('click');
   component.find('button#btn-save').simulate('click');

@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/v4';
+import uuid from 'uuid';
 import Intl from 'intl';
 
 export const TYPE = {
@@ -35,5 +35,6 @@ export const loadFromStorage = () => {
 };
 
 export const addItem = (list, item) => {
-  return [{ id: uuidv4(), ...item }, ...list];
+  const id = uuid.v4();
+  return [{ id, ...item }, ...list];
 };
