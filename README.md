@@ -16,7 +16,7 @@
 
 ## Instalação
 
-clone este repósitorio depois:
+clone este repositório depois:
 
 ```
 $ cd finances
