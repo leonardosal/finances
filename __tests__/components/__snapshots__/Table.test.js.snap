@@ -8,13 +8,13 @@ exports[`should render Table component with correct list of transactions 1`] = `
         "description": "Uber",
         "id": "A",
         "type": "DEBIT",
-        "value": 17,
+        "value": "17.0",
       },
       Object {
         "description": "Salary",
         "id": "B",
         "type": "CREDIT",
-        "value": 2000,
+        "value": "2000.0",
       },
     ]
   }
@@ -23,7 +23,7 @@ exports[`should render Table component with correct list of transactions 1`] = `
     description="Uber"
     key="A"
     type="DEBIT"
-    value={17}
+    value="17.0"
   >
     <div
       className="row"
@@ -42,7 +42,7 @@ exports[`should render Table component with correct list of transactions 1`] = `
     description="Salary"
     key="B"
     type="CREDIT"
-    value={2000}
+    value="2000.0"
   >
     <div
       className="row"

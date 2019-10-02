@@ -9,7 +9,7 @@ exports[`should render Home component when add transaction and cancel 1`] = `
       className="box"
     >
       <CardInfo
-        balance={-10}
+        balance={NaN}
         handleClick={[Function]}
       >
         <div
@@ -20,7 +20,7 @@ exports[`should render Home component when add transaction and cancel 1`] = `
               Saldo
             </h5>
             <h2>
-              -R$10,00
+              R$NaN
             </h2>
           </div>
           <Button
@@ -51,30 +51,28 @@ exports[`should render Home component when add transaction and cancel 1`] = `
         transactions={
           Array [
             Object {
-              "description": "Uber",
-              "id": "0000-0000-0000",
+              "description": "",
+              "id": "0000-0000-0001",
               "type": "DEBIT",
-              "value": 10,
+              "value": "",
             },
           ]
         }
       >
         <Row
-          description="Uber"
-          key="0000-0000-0000"
+          description=""
+          key="0000-0000-0001"
           type="DEBIT"
-          value={10}
+          value=""
         >
           <div
             className="row"
           >
-            <span>
-              Uber
-            </span>
+            <span />
             <span
               className="debit"
             >
-              R$10,00
+              R$NaN
             </span>
           </div>
         </Row>
@@ -90,7 +88,7 @@ exports[`should render Home component when add transaction and cancel 1`] = `
       Object {
         "description": "",
         "type": "DEBIT",
-        "value": 0,
+        "value": "",
       }
     }
   >
@@ -110,10 +108,12 @@ exports[`should render Home component when add transaction and cancel 1`] = `
           name="transactionForm"
           onSubmit={[Function]}
         >
-          <label
-            htmlFor="type"
+          <div
+            className="field-container"
           >
-            Tipo
+            <span>
+              Tipo
+            </span>
             <select
               id="type"
               name="type"
@@ -131,30 +131,57 @@ exports[`should render Home component when add transaction and cancel 1`] = `
                 Receita
               </option>
             </select>
-          </label>
-          <label
-            htmlFor="value"
+          </div>
+          <div
+            className="field-container"
           >
-            Valor
-            <input
+            <span>
+              Valor
+            </span>
+            <CurrencyInput
+              allowNegative={false}
+              autoFocus={false}
+              decimalSeparator=","
               id="value"
+              inputType="text"
               name="value"
               onChange={[Function]}
-              type="number"
-              value={0}
-            />
-          </label>
-          <label
-            htmlFor="description"
+              onChangeEvent={[Function]}
+              precision="2"
+              prefix=""
+              required={true}
+              selectAllOnFocus={false}
+              suffix=""
+              thousandSeparator="."
+              value=""
+            >
+              <input
+                id="value"
+                name="value"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onMouseUp={[Function]}
+                required={true}
+                type="text"
+                value="0,00"
+              />
+            </CurrencyInput>
+          </div>
+          <div
+            className="field-container"
           >
-            Descrição
+            <span>
+              Descrição
+            </span>
             <input
               id="description"
               name="description"
               onChange={[Function]}
+              required={true}
+              type="text"
               value=""
             />
-          </label>
+          </div>
           <div
             className="footer"
           >
@@ -205,7 +232,7 @@ exports[`should render Home component when add transaction with invalid data 1`]
       className="box"
     >
       <CardInfo
-        balance={-10}
+        balance={NaN}
         handleClick={[Function]}
       >
         <div
@@ -216,7 +243,7 @@ exports[`should render Home component when add transaction with invalid data 1`]
               Saldo
             </h5>
             <h2>
-              -R$10,00
+              R$NaN
             </h2>
           </div>
           <Button
@@ -247,30 +274,28 @@ exports[`should render Home component when add transaction with invalid data 1`]
         transactions={
           Array [
             Object {
-              "description": "Uber",
-              "id": "0000-0000-0000",
+              "description": "",
+              "id": "0000-0000-0001",
               "type": "DEBIT",
-              "value": 10,
+              "value": "",
             },
           ]
         }
       >
         <Row
-          description="Uber"
-          key="0000-0000-0000"
+          description=""
+          key="0000-0000-0001"
           type="DEBIT"
-          value={10}
+          value=""
         >
           <div
             className="row"
           >
-            <span>
-              Uber
-            </span>
+            <span />
             <span
               className="debit"
             >
-              R$10,00
+              R$NaN
             </span>
           </div>
         </Row>
@@ -279,19 +304,19 @@ exports[`should render Home component when add transaction with invalid data 1`]
   </div>
   <Modal
     onChangeField={[Function]}
-    show={true}
+    show={false}
     submitForm={[Function]}
     toggleModal={[Function]}
     transaction={
       Object {
         "description": "",
         "type": "DEBIT",
-        "value": 0,
+        "value": "",
       }
     }
   >
     <div
-      className="modal show"
+      className="modal"
       id="modal"
     >
       <div
@@ -306,10 +331,12 @@ exports[`should render Home component when add transaction with invalid data 1`]
           name="transactionForm"
           onSubmit={[Function]}
         >
-          <label
-            htmlFor="type"
+          <div
+            className="field-container"
           >
-            Tipo
+            <span>
+              Tipo
+            </span>
             <select
               id="type"
               name="type"
@@ -327,30 +354,57 @@ exports[`should render Home component when add transaction with invalid data 1`]
                 Receita
               </option>
             </select>
-          </label>
-          <label
-            htmlFor="value"
+          </div>
+          <div
+            className="field-container"
           >
-            Valor
-            <input
+            <span>
+              Valor
+            </span>
+            <CurrencyInput
+              allowNegative={false}
+              autoFocus={false}
+              decimalSeparator=","
               id="value"
+              inputType="text"
               name="value"
               onChange={[Function]}
-              type="number"
-              value={0}
-            />
-          </label>
-          <label
-            htmlFor="description"
+              onChangeEvent={[Function]}
+              precision="2"
+              prefix=""
+              required={true}
+              selectAllOnFocus={false}
+              suffix=""
+              thousandSeparator="."
+              value=""
+            >
+              <input
+                id="value"
+                name="value"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onMouseUp={[Function]}
+                required={true}
+                type="text"
+                value="0,00"
+              />
+            </CurrencyInput>
+          </div>
+          <div
+            className="field-container"
           >
-            Descrição
+            <span>
+              Descrição
+            </span>
             <input
               id="description"
               name="description"
               onChange={[Function]}
+              required={true}
+              type="text"
               value=""
             />
-          </label>
+          </div>
           <div
             className="footer"
           >
@@ -401,7 +455,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
       className="box"
     >
       <CardInfo
-        balance={-10}
+        balance={-0.1}
         handleClick={[Function]}
       >
         <div
@@ -412,7 +466,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
               Saldo
             </h5>
             <h2>
-              -R$10,00
+              -R$0,10
             </h2>
           </div>
           <Button
@@ -446,7 +500,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
               "description": "Uber",
               "id": "0000-0000-0000",
               "type": "DEBIT",
-              "value": 10,
+              "value": 0.1,
             },
           ]
         }
@@ -455,7 +509,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
           description="Uber"
           key="0000-0000-0000"
           type="DEBIT"
-          value={10}
+          value={0.1}
         >
           <div
             className="row"
@@ -466,7 +520,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
             <span
               className="debit"
             >
-              R$10,00
+              R$0,10
             </span>
           </div>
         </Row>
@@ -482,7 +536,7 @@ exports[`should render Home component when add transaction with valid data 1`] =
       Object {
         "description": "",
         "type": "DEBIT",
-        "value": 0,
+        "value": "",
       }
     }
   >
@@ -502,10 +556,12 @@ exports[`should render Home component when add transaction with valid data 1`] =
           name="transactionForm"
           onSubmit={[Function]}
         >
-          <label
-            htmlFor="type"
+          <div
+            className="field-container"
           >
-            Tipo
+            <span>
+              Tipo
+            </span>
             <select
               id="type"
               name="type"
@@ -523,30 +579,57 @@ exports[`should render Home component when add transaction with valid data 1`] =
                 Receita
               </option>
             </select>
-          </label>
-          <label
-            htmlFor="value"
+          </div>
+          <div
+            className="field-container"
           >
-            Valor
-            <input
+            <span>
+              Valor
+            </span>
+            <CurrencyInput
+              allowNegative={false}
+              autoFocus={false}
+              decimalSeparator=","
               id="value"
+              inputType="text"
               name="value"
               onChange={[Function]}
-              type="number"
-              value={0}
-            />
-          </label>
-          <label
-            htmlFor="description"
+              onChangeEvent={[Function]}
+              precision="2"
+              prefix=""
+              required={true}
+              selectAllOnFocus={false}
+              suffix=""
+              thousandSeparator="."
+              value=""
+            >
+              <input
+                id="value"
+                name="value"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onMouseUp={[Function]}
+                required={true}
+                type="text"
+                value="0,00"
+              />
+            </CurrencyInput>
+          </div>
+          <div
+            className="field-container"
           >
-            Descrição
+            <span>
+              Descrição
+            </span>
             <input
               id="description"
               name="description"
               onChange={[Function]}
+              required={true}
+              type="text"
               value=""
             />
-          </label>
+          </div>
           <div
             className="footer"
           >
@@ -641,17 +724,17 @@ exports[`should render Home component with data saved 1`] = `
             Object {
               "id": "0000-0000-0000",
               "type": "CREDIT",
-              "value": 1000,
+              "value": "1000.0",
             },
             Object {
               "id": "0000-0000-0001",
               "type": "DEBIT",
-              "value": 100,
+              "value": "100.0",
             },
             Object {
               "id": "0000-0000-0002",
               "type": "DEBIT",
-              "value": 100,
+              "value": "100.0",
             },
           ]
         }
@@ -660,7 +743,7 @@ exports[`should render Home component with data saved 1`] = `
           description=""
           key="0000-0000-0000"
           type="CREDIT"
-          value={1000}
+          value="1000.0"
         >
           <div
             className="row"
@@ -677,7 +760,7 @@ exports[`should render Home component with data saved 1`] = `
           description=""
           key="0000-0000-0001"
           type="DEBIT"
-          value={100}
+          value="100.0"
         >
           <div
             className="row"
@@ -694,7 +777,7 @@ exports[`should render Home component with data saved 1`] = `
           description=""
           key="0000-0000-0002"
           type="DEBIT"
-          value={100}
+          value="100.0"
         >
           <div
             className="row"
@@ -719,7 +802,7 @@ exports[`should render Home component with data saved 1`] = `
       Object {
         "description": "",
         "type": "DEBIT",
-        "value": 0,
+        "value": "",
       }
     }
   >
@@ -739,10 +822,12 @@ exports[`should render Home component with data saved 1`] = `
           name="transactionForm"
           onSubmit={[Function]}
         >
-          <label
-            htmlFor="type"
+          <div
+            className="field-container"
           >
-            Tipo
+            <span>
+              Tipo
+            </span>
             <select
               id="type"
               name="type"
@@ -760,30 +845,57 @@ exports[`should render Home component with data saved 1`] = `
                 Receita
               </option>
             </select>
-          </label>
-          <label
-            htmlFor="value"
+          </div>
+          <div
+            className="field-container"
           >
-            Valor
-            <input
+            <span>
+              Valor
+            </span>
+            <CurrencyInput
+              allowNegative={false}
+              autoFocus={false}
+              decimalSeparator=","
               id="value"
+              inputType="text"
               name="value"
               onChange={[Function]}
-              type="number"
-              value={0}
-            />
-          </label>
-          <label
-            htmlFor="description"
+              onChangeEvent={[Function]}
+              precision="2"
+              prefix=""
+              required={true}
+              selectAllOnFocus={false}
+              suffix=""
+              thousandSeparator="."
+              value=""
+            >
+              <input
+                id="value"
+                name="value"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onMouseUp={[Function]}
+                required={true}
+                type="text"
+                value="0,00"
+              />
+            </CurrencyInput>
+          </div>
+          <div
+            className="field-container"
           >
-            Descrição
+            <span>
+              Descrição
+            </span>
             <input
               id="description"
               name="description"
               onChange={[Function]}
+              required={true}
+              type="text"
               value=""
             />
-          </label>
+          </div>
           <div
             className="footer"
           >
@@ -886,7 +998,7 @@ exports[`should render Home component without data saved 1`] = `
       Object {
         "description": "",
         "type": "DEBIT",
-        "value": 0,
+        "value": "",
       }
     }
   >
@@ -906,10 +1018,12 @@ exports[`should render Home component without data saved 1`] = `
           name="transactionForm"
           onSubmit={[Function]}
         >
-          <label
-            htmlFor="type"
+          <div
+            className="field-container"
           >
-            Tipo
+            <span>
+              Tipo
+            </span>
             <select
               id="type"
               name="type"
@@ -927,30 +1041,57 @@ exports[`should render Home component without data saved 1`] = `
                 Receita
               </option>
             </select>
-          </label>
-          <label
-            htmlFor="value"
+          </div>
+          <div
+            className="field-container"
           >
-            Valor
-            <input
+            <span>
+              Valor
+            </span>
+            <CurrencyInput
+              allowNegative={false}
+              autoFocus={false}
+              decimalSeparator=","
               id="value"
+              inputType="text"
               name="value"
               onChange={[Function]}
-              type="number"
-              value={0}
-            />
-          </label>
-          <label
-            htmlFor="description"
+              onChangeEvent={[Function]}
+              precision="2"
+              prefix=""
+              required={true}
+              selectAllOnFocus={false}
+              suffix=""
+              thousandSeparator="."
+              value=""
+            >
+              <input
+                id="value"
+                name="value"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onMouseUp={[Function]}
+                required={true}
+                type="text"
+                value="0,00"
+              />
+            </CurrencyInput>
+          </div>
+          <div
+            className="field-container"
           >
-            Descrição
+            <span>
+              Descrição
+            </span>
             <input
               id="description"
               name="description"
               onChange={[Function]}
+              required={true}
+              type="text"
               value=""
             />
-          </label>
+          </div>
           <div
             className="footer"
           >

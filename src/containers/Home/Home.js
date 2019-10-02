@@ -22,7 +22,7 @@ export default class Home extends Component {
       transactions: [],
       transaction: {
         description: '',
-        value: 0,
+        value: '',
         type: TYPE.DEBIT,
       },
       balance: 0,
@@ -42,17 +42,13 @@ export default class Home extends Component {
       showModal: !prevState.showModal,
     }));
 
-  submitForm = e => {
-    e.preventDefault();
+  submitForm = () => {
     const { transaction, transactions } = this.state;
-
-    if (this.isValidForm(transaction)) {
-      const newTransactions = addItem(transactions, transaction);
-      const balance = calculateBalance(newTransactions);
-      this.saveData(balance, newTransactions);
-      this.clearFields();
-      this.toggleModal();
-    }
+    const newTransactions = addItem(transactions, transaction);
+    const balance = calculateBalance(newTransactions);
+    this.saveData(balance, newTransactions);
+    this.clearFields();
+    this.toggleModal();
   };
 
   saveData = (balance, transactions) => {
@@ -68,14 +64,9 @@ export default class Home extends Component {
       transaction: {
         description: '',
         type: TYPE.DEBIT,
-        value: 0,
+        value: '',
       },
     });
-  };
-
-  isValidForm = transaction => {
-    if (transaction.description && transaction.value) return true;
-    return false;
   };
 
   onChangeField = (field, value) => {

@@ -9,7 +9,7 @@ it('should render Row component with correct data props for expense', () => {
   const props = {
     description: 'Uber',
     type: TYPE.DEBIT,
-    value: 17.0,
+    value: '17.0',
   };
   const component = mount(
     <Row
@@ -25,7 +25,7 @@ it('should render Row component with correct data props for revenue', () => {
   const props = {
     description: 'Salary',
     type: TYPE.CREDIT,
-    value: 2000.0,
+    value: '2000.0',
   };
   const component = mount(
     <Row

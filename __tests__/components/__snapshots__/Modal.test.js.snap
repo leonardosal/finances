@@ -10,7 +10,7 @@ exports[`should render Modal component 1`] = `
     Object {
       "description": "",
       "type": "DEBIT",
-      "value": 0,
+      "value": "",
     }
   }
 >
@@ -30,10 +30,12 @@ exports[`should render Modal component 1`] = `
         name="transactionForm"
         onSubmit={[Function]}
       >
-        <label
-          htmlFor="type"
+        <div
+          className="field-container"
         >
-          Tipo
+          <span>
+            Tipo
+          </span>
           <select
             id="type"
             name="type"
@@ -51,30 +53,57 @@ exports[`should render Modal component 1`] = `
               Receita
             </option>
           </select>
-        </label>
-        <label
-          htmlFor="value"
+        </div>
+        <div
+          className="field-container"
         >
-          Valor
-          <input
+          <span>
+            Valor
+          </span>
+          <CurrencyInput
+            allowNegative={false}
+            autoFocus={false}
+            decimalSeparator=","
             id="value"
+            inputType="text"
             name="value"
             onChange={[Function]}
-            type="number"
-            value={0}
-          />
-        </label>
-        <label
-          htmlFor="description"
+            onChangeEvent={[Function]}
+            precision="2"
+            prefix=""
+            required={true}
+            selectAllOnFocus={false}
+            suffix=""
+            thousandSeparator="."
+            value=""
+          >
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onMouseUp={[Function]}
+              required={true}
+              type="text"
+              value="0,00"
+            />
+          </CurrencyInput>
+        </div>
+        <div
+          className="field-container"
         >
-          Descrição
+          <span>
+            Descrição
+          </span>
           <input
             id="description"
             name="description"
             onChange={[Function]}
+            required={true}
+            type="text"
             value=""
           />
-        </label>
+        </div>
         <div
           className="footer"
         >
@@ -125,7 +154,7 @@ exports[`should render Modal component when change values 1`] = `
     Object {
       "description": "",
       "type": "DEBIT",
-      "value": 0,
+      "value": "0.0",
     }
   }
 >
@@ -145,10 +174,12 @@ exports[`should render Modal component when change values 1`] = `
         name="transactionForm"
         onSubmit={[Function]}
       >
-        <label
-          htmlFor="type"
+        <div
+          className="field-container"
         >
-          Tipo
+          <span>
+            Tipo
+          </span>
           <select
             id="type"
             name="type"
@@ -166,30 +197,57 @@ exports[`should render Modal component when change values 1`] = `
               Receita
             </option>
           </select>
-        </label>
-        <label
-          htmlFor="value"
+        </div>
+        <div
+          className="field-container"
         >
-          Valor
-          <input
+          <span>
+            Valor
+          </span>
+          <CurrencyInput
+            allowNegative={false}
+            autoFocus={false}
+            decimalSeparator=","
             id="value"
+            inputType="text"
             name="value"
             onChange={[Function]}
-            type="number"
-            value={0}
-          />
-        </label>
-        <label
-          htmlFor="description"
+            onChangeEvent={[Function]}
+            precision="2"
+            prefix=""
+            required={true}
+            selectAllOnFocus={false}
+            suffix=""
+            thousandSeparator="."
+            value="0.0"
+          >
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onMouseUp={[Function]}
+              required={true}
+              type="text"
+              value="400,00"
+            />
+          </CurrencyInput>
+        </div>
+        <div
+          className="field-container"
         >
-          Descrição
+          <span>
+            Descrição
+          </span>
           <input
             id="description"
             name="description"
             onChange={[Function]}
+            required={true}
+            type="text"
             value=""
           />
-        </label>
+        </div>
         <div
           className="footer"
         >
@@ -240,7 +298,7 @@ exports[`should render Modal component when show is true 1`] = `
     Object {
       "description": "Uber",
       "type": "submit",
-      "value": 17,
+      "value": "17.0",
     }
   }
 >
@@ -260,10 +318,12 @@ exports[`should render Modal component when show is true 1`] = `
         name="transactionForm"
         onSubmit={[Function]}
       >
-        <label
-          htmlFor="type"
+        <div
+          className="field-container"
         >
-          Tipo
+          <span>
+            Tipo
+          </span>
           <select
             id="type"
             name="type"
@@ -281,30 +341,57 @@ exports[`should render Modal component when show is true 1`] = `
               Receita
             </option>
           </select>
-        </label>
-        <label
-          htmlFor="value"
+        </div>
+        <div
+          className="field-container"
         >
-          Valor
-          <input
+          <span>
+            Valor
+          </span>
+          <CurrencyInput
+            allowNegative={false}
+            autoFocus={false}
+            decimalSeparator=","
             id="value"
+            inputType="text"
             name="value"
             onChange={[Function]}
-            type="number"
-            value={17}
-          />
-        </label>
-        <label
-          htmlFor="description"
+            onChangeEvent={[Function]}
+            precision="2"
+            prefix=""
+            required={true}
+            selectAllOnFocus={false}
+            suffix=""
+            thousandSeparator="."
+            value="17.0"
+          >
+            <input
+              id="value"
+              name="value"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onMouseUp={[Function]}
+              required={true}
+              type="text"
+              value="170,00"
+            />
+          </CurrencyInput>
+        </div>
+        <div
+          className="field-container"
         >
-          Descrição
+          <span>
+            Descrição
+          </span>
           <input
             id="description"
             name="description"
             onChange={[Function]}
+            required={true}
+            type="text"
             value="Uber"
           />
-        </label>
+        </div>
         <div
           className="footer"
         >

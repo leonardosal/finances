@@ -6,7 +6,7 @@ import CardInfo from '../../src/components/CardInfo';
 
 it('should render card component with correct balance value', () => {
   const props = {
-    balance: 1000,
+    balance: 1000.0,
     handleClick: () => null,
   };
   const component = mount(

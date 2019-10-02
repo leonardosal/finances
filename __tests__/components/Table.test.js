@@ -11,13 +11,13 @@ it('should render Table component with correct list of transactions', () => {
       id: 'A',
       description: 'Uber',
       type: TYPE.DEBIT,
-      value: 17.0,
+      value: '17.0',
     },
     {
       id: 'B',
       description: 'Salary',
       type: TYPE.CREDIT,
-      value: 2000.0,
+      value: '2000.0',
     },
   ];
   const component = mount(<Table transactions={transactions} />);

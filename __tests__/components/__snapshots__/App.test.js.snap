@@ -71,7 +71,7 @@ exports[`should render App component 1`] = `
         Object {
           "description": "",
           "type": "DEBIT",
-          "value": 0,
+          "value": "",
         }
       }
     >
@@ -91,10 +91,12 @@ exports[`should render App component 1`] = `
             name="transactionForm"
             onSubmit={[Function]}
           >
-            <label
-              htmlFor="type"
+            <div
+              className="field-container"
             >
-              Tipo
+              <span>
+                Tipo
+              </span>
               <select
                 id="type"
                 name="type"
@@ -112,30 +114,57 @@ exports[`should render App component 1`] = `
                   Receita
                 </option>
               </select>
-            </label>
-            <label
-              htmlFor="value"
+            </div>
+            <div
+              className="field-container"
             >
-              Valor
-              <input
+              <span>
+                Valor
+              </span>
+              <CurrencyInput
+                allowNegative={false}
+                autoFocus={false}
+                decimalSeparator=","
                 id="value"
+                inputType="text"
                 name="value"
                 onChange={[Function]}
-                type="number"
-                value={0}
-              />
-            </label>
-            <label
-              htmlFor="description"
+                onChangeEvent={[Function]}
+                precision="2"
+                prefix=""
+                required={true}
+                selectAllOnFocus={false}
+                suffix=""
+                thousandSeparator="."
+                value=""
+              >
+                <input
+                  id="value"
+                  name="value"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onMouseUp={[Function]}
+                  required={true}
+                  type="text"
+                  value="0,00"
+                />
+              </CurrencyInput>
+            </div>
+            <div
+              className="field-container"
             >
-              Descrição
+              <span>
+                Descrição
+              </span>
               <input
                 id="description"
                 name="description"
                 onChange={[Function]}
+                required={true}
+                type="text"
                 value=""
               />
-            </label>
+            </div>
             <div
               className="footer"
             >

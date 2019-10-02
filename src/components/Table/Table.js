@@ -25,7 +25,7 @@ Table.propTypes = {
       id: propTypes.string,
       type: propTypes.string,
       description: propTypes.string,
-      value: propTypes.number,
+      value: propTypes.string,
     })
   ),
 };

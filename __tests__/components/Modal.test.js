@@ -11,7 +11,7 @@ it('should render Modal component', () => {
     onChangeField: () => true,
     show: false,
     transaction: {
-      value: 17.0,
+      value: '17.0',
       description: 'Uber',
       type: 'submit',
     },
@@ -33,7 +33,7 @@ it('should render Modal component when show is true', () => {
     onChangeField: () => true,
     show: true,
     transaction: {
-      value: 17.0,
+      value: '17.0',
       description: 'Uber',
       type: 'submit',
     },
@@ -57,7 +57,7 @@ it('should render Modal component when change values', () => {
     onChangeField: () => true,
     show: true,
     transaction: {
-      value: 0,
+      value: '0.0',
       description: '',
       type: 'DEBIT',
     },
@@ -77,7 +77,7 @@ it('should render Modal component when change values', () => {
   });
 
   component.find('input#value').simulate('change', {
-    target: { value: 4000 },
+    target: { value: '4000.0' },
   });
 
   component.find('input#description').simulate('change', {

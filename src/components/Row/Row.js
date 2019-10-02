@@ -17,13 +17,13 @@ const Row = ({ description, value, type }) => (
 Row.propTypes = {
   description: propTypes.string,
   type: propTypes.string,
-  value: propTypes.number,
+  value: propTypes.string,
 };
 
 Row.defaultProps = {
   description: '',
   type: TYPE.CREDIT,
-  value: 0,
+  value: '',
 };
 
 export default Row;
