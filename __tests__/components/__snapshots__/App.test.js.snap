@@ -71,7 +71,7 @@ exports[`should render App component 1`] = `
         Object {
           "description": "",
           "type": "DEBIT",
-          "value": "",
+          "value": 0,
         }
       }
     >
@@ -136,7 +136,7 @@ exports[`should render App component 1`] = `
                 selectAllOnFocus={false}
                 suffix=""
                 thousandSeparator="."
-                value=""
+                value={0}
               >
                 <input
                   id="value"
