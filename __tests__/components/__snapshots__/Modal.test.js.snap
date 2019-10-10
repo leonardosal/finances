@@ -10,7 +10,7 @@ exports[`should render Modal component 1`] = `
     Object {
       "description": "",
       "type": "DEBIT",
-      "value": "",
+      "value": 0,
     }
   }
 >
@@ -75,7 +75,7 @@ exports[`should render Modal component 1`] = `
             selectAllOnFocus={false}
             suffix=""
             thousandSeparator="."
-            value=""
+            value={0}
           >
             <input
               id="value"
@@ -154,7 +154,7 @@ exports[`should render Modal component when change values 1`] = `
     Object {
       "description": "",
       "type": "DEBIT",
-      "value": "0.0",
+      "value": 0,
     }
   }
 >
@@ -219,7 +219,7 @@ exports[`should render Modal component when change values 1`] = `
             selectAllOnFocus={false}
             suffix=""
             thousandSeparator="."
-            value="0.0"
+            value={0}
           >
             <input
               id="value"
@@ -229,7 +229,7 @@ exports[`should render Modal component when change values 1`] = `
               onMouseUp={[Function]}
               required={true}
               type="text"
-              value="400,00"
+              value="40,00"
             />
           </CurrencyInput>
         </div>
@@ -298,7 +298,7 @@ exports[`should render Modal component when show is true 1`] = `
     Object {
       "description": "Uber",
       "type": "submit",
-      "value": "17.0",
+      "value": 17,
     }
   }
 >
@@ -363,7 +363,7 @@ exports[`should render Modal component when show is true 1`] = `
             selectAllOnFocus={false}
             suffix=""
             thousandSeparator="."
-            value="17.0"
+            value={17}
           >
             <input
               id="value"
@@ -373,7 +373,7 @@ exports[`should render Modal component when show is true 1`] = `
               onMouseUp={[Function]}
               required={true}
               type="text"
-              value="170,00"
+              value="17,00"
             />
           </CurrencyInput>
         </div>

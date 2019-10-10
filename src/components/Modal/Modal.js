@@ -47,7 +47,7 @@ class Modal extends Component {
                 thousandSeparator="."
                 required
                 onChangeEvent={(e, maskedValue, floatvalue) =>
-                  onChangeField('value', floatvalue)
+                  onChangeField('value', parseFloat(floatvalue, 10))
                 }
                 value={transaction.value}
               />
@@ -85,7 +85,7 @@ Modal.propTypes = {
   onChangeField: propTypes.func.isRequired,
   show: propTypes.bool,
   transaction: propTypes.shape({
-    value: propTypes.string,
+    value: propTypes.number,
     type: propTypes.string,
     description: propTypes.string,
   }),
@@ -94,7 +94,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   show: false,
   transaction: {
-    value: '',
+    value: 0,
     description: '',
     type: 'DEBIT',
   },

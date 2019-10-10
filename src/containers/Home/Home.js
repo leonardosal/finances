@@ -22,7 +22,7 @@ export default class Home extends Component {
       transactions: [],
       transaction: {
         description: '',
-        value: '',
+        value: 0,
         type: TYPE.DEBIT,
       },
       balance: 0,
@@ -64,7 +64,7 @@ export default class Home extends Component {
       transaction: {
         description: '',
         type: TYPE.DEBIT,
-        value: '',
+        value: 0,
       },
     });
   };
